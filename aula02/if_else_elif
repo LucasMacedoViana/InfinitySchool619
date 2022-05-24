@@ -1,0 +1,186 @@
+Tabela da verdade
+AND (e) ou OR(ou)
+AND- tenho que ter todas as condições verdadeira para ser verdadeiro
+
+OR- tenho que ter pelo menos uma das condições verdadeiras para ser verdadeiro
+
+*************************************************************************************************************************************************************************
+
+print(1==2)	                 #false          print("a"=="b")
+print(1==1)                  #true           print("a"=="a")
+print((1!=2) and (1==2))     #false          print(("a"!="b") and ("a"=="b"))
+print((1!=2) or (1==2))      #true           print(("a"!="b") or ("a"=="b"))
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+If (se)
+Else (se não)
+Elif (se não ,se)
+
+sintaxe
+if (condição1):
+  condição/logica
+elif condição2:
+  codigo/logica
+....
+else:
+  condição/logica
+  
+*************************************************************************************************************************************************************************
+
+numero = int(input("Digite um numero:"))
+
+if numero > 3:
+    print("Este número é maior que 3")
+else:
+    print("Este número é menor que 3")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+"""informar se o numero é negativo ou positivo"""
+numero = int(input("Digite um numero:"))
+
+if numero > 0:
+    print("Este número é positivo")
+else:
+    print("Este número negativo")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+"""informar se o numero é negativo ou positivo ou digitou 0 """
+numero = int(input("Digite um numero:"))
+
+if numero > 0:
+    print("Este número é positivo")
+elif numero == 0:
+    print("você digitou 0")
+else:
+    print("Este número negativo")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+"""CRIE UM CÓDIGO QUE COLETE A VELOCIDADE DE UM CARRO E INFORME SE ELE ESTÁ NA VELOCIDADE PERMITIDA(ATÉ 60KM/H), ALTA VELOCIDADE(ACIMA DE 60KM/H E ABAIXO DE 80KM/H),
+MUITO RÁPIDO( A CIMA DE 80KM/H) OU VUADO (A CIMA DE 120KM/H)"""
+
+
+velocidade = float(input("Digite a velocidade do carro:"))
+
+if velocidade <= 60:
+    print("o condutor está na velocidade permitida")
+elif (velocidade >60) and (velocidade <80 ):
+    print("o condutor está em alta velocidade")
+elif (velocidade > 80) and (velocidade <= 120):
+    print("o condutor está muito rápido")
+else:
+    print("o condutor está vuado!")
+    
+    
+ ----------------OUTRA FORMA DE RESOLVER------------
+ 
+velocidade = float(input("Digite a velocidade do carro:"))
+
+if velocidade <= 60:
+    print("o condutor está na velocidade permitida")
+elif 60 < velocidade < 80:
+    print("o condutor está em alta velocidade")
+elif 80 < velocidade <= 120:
+    print("o condutor está muito rápido")
+else:
+    print("o condutor está vuado!")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ """ Faça um programa que leia a altura e o peso de um usuário e calcule o seu IMC:
+im
+- Se o IMC for menor que 18.5, imprimir 'abaixo do peso'
+- Se o IMC for entre 18.5 e 24.9 imprimir 'normal'
+- Se o IMC for entre 25 e 29.9, imprimir 'sobrepeso'
+- Se o IMC for entre 30 e 39.9, imprimir 'obesidade tipo I'
+- Se o IMC for maior que 40, imprimir 'alerta: obesidade mórbida'"""
+
+
+
+peso = float(input("Digite seu peso:"))
+altura = float(input("Digite sua altura:"))
+
+imc = peso/(altura**2)
+
+print(f"seu imc é {imc:.2f}")
+
+if imc < 18.5:
+    print("você está abaixo do peso")
+elif (imc >= 18.5) and (imc <= 24.9):
+    print("Você está normal")
+elif (imc >= 25) and (imc <=29.9):
+    print("Você esta com sobrepeso")
+elif (imc >= 30) and (imc <= 39.9):
+    print("Você está com Obesidade tipo 1")
+else:
+    print("Você está com obesidade mórbida")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+""Crie o seguinte jogo:
+Peça um palpite ao usuário.
+Indique se o palpite é menor, maior ou se é igual ao número secreto.
+
+OBS: Escolha um número secreto inteiro (0, 50) para ser a resposta."""
+
+numero = int(input("Qual é o número, entre 0 e 50, que eu estou pensando?"))
+segredo = 22
+
+if numero > segredo:
+    print(f"PASSOU DIRETO, eu estava pensando no {segredo}")
+elif numero < segredo:
+    print(f"TA É LONGE, eu estava pensando no {segredo}")
+else:
+    print(f"NA MOSCA, eu estava pensando mesmo no {segredo}")
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ """Crie um código que indique se a temperatura digitada pelo usuário caracteriza:
+1)Temperatura normal - até 37°C
+2)Febril - até 37.8°C
+3)Febre Leve - até 38.5°C 
+4)Febre Moderada - 38.5°C a 39.4°C 
+5)Febre Grave - 39.5°C
+ temperatura = float(input("Informe a temperatura: "))"""
+
+if temperatura <= 37:
+    print(f"temperatura {temperatura}ºC é considerada normal")
+elif temperatura <= 37.8:
+    print(f"temperatura {temperatura}ºC é considerada febril")
+elif temperatura <= 38.5:
+    print(f"temperatura {temperatura}ºC é considerada febre leve")
+elif temperatura <= 39.4:
+    print(f"temperatura {temperatura}ºC é considerada febre moderada")
+else:
+    print(f"temperatura {temperatura}ºC é considerada febre grave")
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+ Peça o usuário e a senha:
+O acesso só é permitido se o usuário for INFINITY e a senha school.
+Caso não ocorra o cruzamento das informações acima, mostre em tela ACESSO NEGADO.
+
+usuario = input("Informe o usuario: ")
+senha = input('Insira a senha: ')
+
+if usuario.upper().strip() == "INFINITY" and senha == 'school':
+    print("LOGIN REALIZADO")
+else:
+    print("ACESSO NEGADO")
+    
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Faça um programa que receba o nome do aluno, duas notas e imprima o resultado
+de acordo com a tabela:
+1) Média maior que 7.0: Aprovado com conceito A
+2) Média maior que 5.0 e menor que 7,0: Aprovado com conceito B
+3) Média maior que 4.0 e menor 5,0: Aluno fará avaliação final
+4) Média menor que 4.0: Reprovado :/
+
+OBS: Apresente o nome do aluno, sua média final e sua situação.
+"""
+
+aluno = str(input("Informe o nome do aluno: "))
+nota1 = float(input("1ª nota:"))
+nota2 = float(input("2ª nota: "))
+
+media = (nota1 + nota2) / 2
+
+if media >= 7:
+    print(f"O {aluno}, obeteve a média {media:.2f} com conceito A")
+elif media >=5:
+    print(f"O {aluno}, obeteve a média {media:.2f} com conceito B")
+elif media >= 4:
+    print(f"O {aluno}, obeteve a média {media:.2f}  e vai para a avaliação final")
+else:
+    print(f"O {aluno}, obeteve a média {media:.2f} e está reprovado")
