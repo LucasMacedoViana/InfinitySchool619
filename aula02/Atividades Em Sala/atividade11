@@ -1,0 +1,24 @@
+ Faça um programa que receba o nome do aluno, duas notas e imprima o resultado
+de acordo com a tabela:
+1) Média maior que 7.0: Aprovado com conceito A
+2) Média maior que 5.0 e menor que 7,0: Aprovado com conceito B
+3) Média maior que 4.0 e menor 5,0: Aluno fará avaliação final
+4) Média menor que 4.0: Reprovado :/
+
+OBS: Apresente o nome do aluno, sua média final e sua situação.
+"""
+
+aluno = str(input("Informe o nome do aluno: "))
+nota1 = float(input("1ª nota:"))
+nota2 = float(input("2ª nota: "))
+
+media = (nota1 + nota2) / 2
+
+if media >= 7:
+    print(f"O {aluno}, obeteve a média {media:.2f} com conceito A")
+elif media >=5:
+    print(f"O {aluno}, obeteve a média {media:.2f} com conceito B")
+elif media >= 4:
+    print(f"O {aluno}, obeteve a média {media:.2f}  e vai para a avaliação final")
+else:
+    print(f"O {aluno}, obeteve a média {media:.2f} e está reprovado")
