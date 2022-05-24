@@ -1,0 +1,32 @@
+texto = str(input("Digite um texto em caixa alta:"))
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+para passar o conteudo da strig para minusculo
+
+variavel.lower()
+texto = str(input("Digite um texto:").lower()) ou print(texto.lower())
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+para passar o conteudo da strig para maiusculo
+
+variavel.upper()
+texto = str(input("Digite um texto:").upper()) ou print(texto.upper())
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+para passar o conteudo da strig com a primeira letra minuscula
+
+variavel.title()
+texto = str(input("Digite um texto:").title()) ou print(texto.title())
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+podemos juntar duas dessas funções para caso receba uma string toda em maisuscula
+.title().lowe()
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+remove o espaço da string informada
+.strip()
