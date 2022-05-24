@@ -1,0 +1,12 @@
+numero1 = float(input("Digite o primeiro número: "))
+numero2 = float(input("Digite o segundo número: "))
+
+soma = numero1 + numero2
+diminuir = numero1 - numero2
+multiplicar = numero1 * numero2
+dividir = numero1 / numero2
+
+print(numero1, "+", numero2, "=", soma)
+print(numero1, "-", numero2, "=", diminuir)
+print(numero1, "x", numero2, "=", multiplicar)
+print(numero1, "/", numero2, "=", dividir)
