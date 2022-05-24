@@ -1,0 +1,8 @@
+"""peça um numero (inteiro ao usuario e mostre o resultado dele elevado ao cubo"""
+numero = int(input("digite um numero inteiro:"))
+
+print(pow(numero , 3))
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+igual a print(pow(numero**3))
