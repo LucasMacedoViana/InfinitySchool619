@@ -1,0 +1,3 @@
+import math --- importando a biblioteca de operadores matematicos
+
+fron math import floor ----- importar somente uma função para deixar o programa mais agil em caso de um sistema mais robusto, importação especifica!
