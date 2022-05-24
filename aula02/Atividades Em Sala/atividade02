@@ -1,0 +1,5 @@
+#Passa o conteúdo da string para MAIÚSCULO.
+
+nome = str(input("Digite seu nome: "))
+
+print(nome.upper())
