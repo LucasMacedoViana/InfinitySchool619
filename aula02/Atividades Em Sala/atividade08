@@ -1,0 +1,18 @@
+"""Crie um código que indique se a temperatura digitada pelo usuário caracteriza:
+1)Temperatura normal - até 37°C
+2)Febril - até 37.8°C
+3)Febre Leve - até 38.5°C 
+4)Febre Moderada - 38.5°C a 39.4°C 
+5)Febre Grave - 39.5°C
+ temperatura = float(input("Informe a temperatura: "))"""
+
+if temperatura <= 37:
+    print(f"temperatura {temperatura}ºC é considerada normal")
+elif temperatura <= 37.8:
+    print(f"temperatura {temperatura}ºC é considerada febril")
+elif temperatura <= 38.5:
+    print(f"temperatura {temperatura}ºC é considerada febre leve")
+elif temperatura <= 39.4:
+    print(f"temperatura {temperatura}ºC é considerada febre moderada")
+else:
+    print(f"temperatura {temperatura}ºC é considerada febre grave")
