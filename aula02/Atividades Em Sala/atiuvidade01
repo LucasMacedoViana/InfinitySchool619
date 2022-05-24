@@ -1,0 +1,5 @@
+#Peça um texto em maiúsculo e mostre em tela o mesmo texto em minúsculo.
+
+nome = str(input("Digite seu nome: "))
+
+print(nome.lower())
