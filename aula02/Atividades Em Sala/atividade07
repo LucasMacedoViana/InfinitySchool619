@@ -1,0 +1,15 @@
+""Crie o seguinte jogo:
+Peça um palpite ao usuário.
+Indique se o palpite é menor, maior ou se é igual ao número secreto.
+
+OBS: Escolha um número secreto inteiro (0, 50) para ser a resposta."""
+
+numero = int(input("Qual é o número, entre 0 e 50, que eu estou pensando?"))
+segredo = 22
+
+if numero > segredo:
+    print(f"PASSOU DIRETO, eu estava pensando no {segredo}")
+elif numero < segredo:
+    print(f"TA É LONGE, eu estava pensando no {segredo}")
+else:
+    print(f"NA MOSCA, eu estava pensando mesmo no {segredo}")
