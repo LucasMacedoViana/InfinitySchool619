@@ -1,0 +1,8 @@
+numero= int(input("Digite um valor inteiro e negativo"))
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+transforma o numero da variavel em um numero absoluto 
+
+abd(variavel)
+
+print(abs(numero))
