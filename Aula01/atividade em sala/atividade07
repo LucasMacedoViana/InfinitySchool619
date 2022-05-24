@@ -1,0 +1,25 @@
+opção 1
+print((8+9+7)/3)
+
+opção 2
+media = (8+9+7)/3
+print(media)
+
+opção 3
+numero1 = 8
+numero2 = 9
+numero3 = 7
+
+media = (numero1 + numero2 + numero3)/3
+
+print(media)
+
+opção 4
+numeros = 3
+numero1 = 8
+numero2 = 9
+numero3 = 7
+
+media = (numero1 + numero2 + numero3)/numeros
+
+print(media)
