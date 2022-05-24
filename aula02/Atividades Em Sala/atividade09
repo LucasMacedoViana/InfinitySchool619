@@ -1,0 +1,11 @@
+time1 = str(input("Informe o nome do 1º time: "))
+time2 = str(input("Informe o nome do 2º time: "))
+gol1 = int(input(f"quantos gols o {time1} fez? "))
+gol2 = int(input(f"quantos gols o {time2} fez? "))
+
+if gol1 > gol2:
+    print(f"O {time1} foi o vencedor")
+elif gol2 > gol1:
+    print(f"O {time2} foi o vencedor")
+else:
+    print("O jogo terminou empatado")
