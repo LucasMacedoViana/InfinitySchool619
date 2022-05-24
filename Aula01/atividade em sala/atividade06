@@ -1,0 +1,8 @@
+solução 1
+print(10*50)
+
+solução 2
+numero1 = 10
+numero2 = 50
+
+print(numero1 * numero2)
