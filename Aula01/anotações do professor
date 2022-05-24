@@ -1,0 +1,186 @@
+MeTEXTO!
+
+Aula Introdução ao Python
+
+Esta é uma aula de programação
+
+Vimos que existem várias linguagens, 
+
+como
+
+a linguagem Java!
+
+A linguagem que estamos utilizando é
+
+a linguagem Python!
+
+
+Nossa Aula é na 
+Infinity
+
+também conhecida como
+
+Infinity School.
+
+Bons códigos!
+
+Esta Linha será um comentário em breve!
+
+# print("Aula Introdução ao Python")
+
+print("Esta é uma aula de programação")
+
+# print("Vimos que existem várias linguagens,")
+
+# print("como")
+
+# print("a linguagem Java!")
+
+print("A linguagem que estamos utilizando é")
+
+print("a linguagem Python!")
+
+print("Nossa Aula é na")
+
+# print("Infinity")
+
+# print("também conhecida como")
+
+print("Infinity School.")
+
+print("Bons códigos!")
+
+# print("Esta Linha será um comentário em breve!")
+
+
+
+
+nome = "Rodolfo"
+sobrenome = "Ricardo"
+# print(nome, sobrenome)
+print(nome + " " + sobrenome)
+
+
+
+#1) Apresente a mensagem: “Meu nome é ________
+# e esse é o meu primeiro print em tela!”
+
+nome = "Lucas"
+parte01 = "Meu nome é"
+parte02 = "e esse é o meu primeiro print em tela!"
+
+# print("Meu nome é", nome, "e esse é o meu primeiro print em tela!")
+print(parte01, nome, parte02)
+
+ATIVIDADE 06
+Calcule e apresente o produto entre 10 * 50
+
+OBS: Apresente duas soluções.
+
+
+# Calcule e apresente o produto entre 10 * 50
+# OBS: Apresente duas soluções.
+
+print(10 * 50)
+multiplicacao = 10 * 50
+print(multiplicacao)
+numero01 = 10
+numero02 = 50
+print(numero01 * numero02)
+print(10 * numero02)
+
+
+""" ATIVIDADE 07
+Calcule e apresente a média entre os
+números 8, 9 e 7.
+OBS: Apresente duas soluções"""
+
+soma = 8 + 9 + 7
+media = soma / 3
+print(soma / 3)
+print(media)
+print((8 + 9 + 7 )/ 3)
+
+
+# nome = input("Qual o seu nome? ")
+numero = int(input("Digite um número inteiro: "))
+print(type(numero))
+
+
+# Atividade 08
+# Peça o nome e o sobrenome do usuário e mostre em tela
+
+nome = input("Digite o seu primero nome: ")
+sobrenome = input("Digite o seu sobrenome: ")
+
+print(nome, sobrenome)
+
+
+
+# Atividade 8.1
+# Peça dois números INTEIROS e apresente a SOMA dos dois.
+
+numero01 = int(input("Número 01: "))
+numero02 = int(input("Número 02: "))
+soma = numero01 + numero02
+print(soma)
+
+
+
+''' Atividade 09
+Refaça o programa das médias, agora com 4 notas,
+pedindo as notas para o usuário, e, por fim,
+mostrar o resultado em tela.
+O resultado é a média das notas informadas.'''
+
+nota1 = float(input("Informe a 1 nota: "))
+nota2 = float(input("Informe a 2 nota: "))
+nota3 = float(input("Informe a 3 nota: "))
+nota4 = float(input("Informe a 4 nota: "))
+soma = nota1 + nota2 + nota3 + nota4
+media = soma / 4
+print("A sua média é:", media)
+
+
+
+# booleano -> VERDADEIRO OU FALSO
+#  True ou False
+
+print(1 == 2)
+
+
+
+"""
+Atividade 10
+Peça dois números ao usuário e mostre os resultados
+de uma calculadora básica:
+1) Adição (+)
+2) Subtração (-)
+3) Multiplicação (*)
+4) Divisão (/)
+"""
+num_01 = float(input("Digite o primeiro número: "))
+num_02 = float(input("Digite o segundo número: "))
+soma = num_01 + num_02
+subtracao = num_01 - num_02
+multiplicacao = num_01 * num_02
+divisao = num_01 / num_02
+print("A soma entre dois números é:", soma)
+print("A subtração entre dois números é:", subtracao)
+print("A multiplicação entre os dois números é:", multiplicacao)
+print("A divisão dos dois números é:", divisao)
+
+
+
+"EXEMPLO PARAMETROS SEP E END NAS STRINGS"
+nome = "Infinity"
+sobrenome = "School"
+
+print(nome, sep='', end=" ")
+print(sobrenome)
+
+# DESAFIO 677.116.960-00
+
+
+SITE UTILIZADO PARA GERAR O CPF:
+https://www.4devs.com.br/
