@@ -1,0 +1,11 @@
+Peça o usuário e a senha:
+O acesso só é permitido se o usuário for INFINITY e a senha school.
+Caso não ocorra o cruzamento das informações acima, mostre em tela ACESSO NEGADO.
+
+usuario = input("Informe o usuario: ")
+senha = input('Insira a senha: ')
+
+if usuario.upper().strip() == "INFINITY" and senha == 'school':
+    print("LOGIN REALIZADO")
+else:
+    print("ACESSO NEGADO")
