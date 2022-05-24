@@ -1,0 +1,10 @@
+Crie um código para indicar se o número digitado pelo usuário é POSITIVO ou NEGATIVO.
+
+numero = int(input("Digite um numero:"))
+
+if numero > 0:
+    print("Este número é positivo")
+elif numero == 0:
+    print("você digitou 0")
+else:
+    print("Este número negativo")
