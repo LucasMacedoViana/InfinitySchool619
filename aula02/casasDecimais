@@ -1,0 +1,9 @@
+para criar o numero de casas decimais dentro da F-String {variavel:.xf} onde x é a quantidade de casas decimais
+
+
+numero1 = int(input("Digite o primeiro numero:"))
+numero2 = int(input("Digite o segundo numero:"))
+
+soma = numero1 + numero2
+
+print(f"{numero1} + {numero2} = {soma:.2f}")
