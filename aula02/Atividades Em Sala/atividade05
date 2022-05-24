@@ -1,0 +1,14 @@
+Crie um código que colete a velocidade de um carro e informe se ele está na velocidade permitida (Até 60km/h), alta velocidade (acima de 60 e abaixo de
+80km/h), muito rápido (acima de 80km/h) ou “VUADO!” (acima de 120km/h)
+
+velocidade = float(input("Digite a velocidade do carro:"))
+
+if velocidade <= 60:
+    print("o condutor está na velocidade permitida")
+elif (velocidade >60) and (velocidade <80 ):
+    print("o condutor está em alta velocidade")
+elif (velocidade > 80) and (velocidade <= 120):
+    print("o condutor está muito rápido")
+else:
+    print("o condutor está vuado!")
+    
