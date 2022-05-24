@@ -1,3 +1,6 @@
+Crie um código que informe ao usuário se o número digitado por ele é PAR ou ÍMPAR.
+
+
 numero = int(input("Digite um númeto: "))
 
 if numero % 2 == 0:
