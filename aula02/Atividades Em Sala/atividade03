@@ -1,0 +1,11 @@
+Imprimir em tela:
+1) False
+2) True
+3) False, porém, utilizando AND
+4) True, porém, utilizando OR
+
+
+print(1=="a")
+print(1==1)
+print((1!="a") and (1==2))
+print((1!=2) or (1==2))
