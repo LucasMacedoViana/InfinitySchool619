@@ -1,0 +1,20 @@
+#desafio
+imprimir o cpf 677.116.960-00
+
+resolução 01
+part1 = "677"
+part2 = "116"
+part3 = "960"
+part4 = "60"
+
+print(part1, part2, part3, sep=".", end="-")
+print(part4)
+
+resolução 02
+
+part1 = "677"
+part2 = "116"
+part3 = "960"
+part4 = "60"
+
+print(part1,".", part2,".", part3, "-", part4, sep="")
