@@ -3,6 +3,11 @@ F-Strings
 print(f"texto{variavel ou operação} texto")
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.format()
+
+print ("texto {variavel1} texto {variavel2}".format(variavel1, variavel2))
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 """pedir 2 numeros e monstra a soma"""
 numero1 = int(input("Digite o primeiro numero:"))
 numero2 = int(input("Digite o segundo numero:"))
