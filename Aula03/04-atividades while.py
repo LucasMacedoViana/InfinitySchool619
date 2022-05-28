@@ -119,7 +119,7 @@ O randint precisa de um número de início e o fim.'''
 
 
 import random
-segredo = random.randint(0,11)
+segredo = random.randint(1,10)
 while True:
     num = int(input("Descubra o número, dica fica etre 1 e 10: "))
     if num > segredo:
