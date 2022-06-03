@@ -1,0 +1,17 @@
+sintaxe
+
+for num in range(start, stop, step):
+ print ("loop)
+
+o num funciona como contador
+range é o intervalo
+
+contador = 0
+while contador < 10:
+  printo "imprimindo"
+  contador +=1
+
+for contador in range (0,10):
+  print ("imprimindo")
+  
+ 
