@@ -64,3 +64,37 @@ for contador in range (inicio, fim):
     if contador % 2 != 0:
         print (contador)
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+''' 07- Solicite ao usuário um limite inferior e um superior, depois informe quantos números pares existem no intervalo.''' 
+nome = str(input("Digite seu nome completo"))
+qtdVogais = 0
+qtdCons = 0
+for letra in nome.strip():
+    if letra in "aeiou":
+        qtdVogais +=1
+    else:
+        qtdCons +=1
+
+print(qtdVogais)
+print(qtdCons)
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+''' 08 -O Sr. Manoel Joaquim acaba de adquirir uma panificadora e pretende implantar a metodologia da tabelinha, que já é um sucesso na sua loja de 1,99. Você foi contratado para desenvolver o programa que monta a tabela de preços de pães, de 1 até 50 pães, a partir do preço do pão informado pelo usuário, conforme o exemplo abaixo:
+
+Preço do pão: R$ 0.18
+Panificadora Pão de Ontem - Tabela de preços
+1 - R$ 0.18
+2 - R$ 0.36
+...
+50 - R$ 9.00'''
+
+print("Preço do Pão R$0.18")
+print("Panificadora Pão de Omtem - tabela de preços")
+for i in range (1, 51):
+    print(f'{i:02.0f} - R$ {i * 0.18:.2f}')
+
+
+
+
+
