@@ -1,0 +1,25 @@
+funções, são blocos de codigo que realizaõ determinada tarefas que normalmente precisam ser executadas diversas vezes dentro de uma aplicação
+
+sintaxe
+
+def - palavra reservada
+paramentros, separados por virgula, pode ter ou não.
+def *nome da função* (parametros):
+  *o que a função vai fazer*
+  
+'''duas maneiras de chamar a função'''
+
+def somar(valor_1, valor_2):
+    resultado = valor_1 + valor_2
+    print(f"resultado da soma: {resultado}")
+
+def somar_ ():
+    valor_1 = int(input("informeo valor1: "))
+    valor_2 = int(input("informeo valor2: "))
+    resultado = valor_1 + valor_2
+    print(f"resultado da soma: {resultado}")
+
+
+somar(1,2)
+
+somar_()
