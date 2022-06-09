@@ -1,0 +1,69 @@
+Crie um laço de repetição solicite idade, sexo (M ou F) e salário de vários habitantes. Em seguida, exiba as seguintes informações:
+
+Maior salario do grupo
+Menor salário do grupo
+Media salarial
+Quantidade de mulheres na região
+Menor idade do grupo
+Maior idade do grupo
+Idade e sexo da pessoa que possui o menor salário
+
+Encerre o programa ao ser digitada uma idade negativa
+
+maior_salario = 0
+menor_salario = 0
+qtd_mulheres = 0
+maior_idade = 0
+menor_idade = 0
+idade_menor_salario = 0
+sexo_menor_salario = 0
+media_salario = 0
+qtd_habitante = 0
+
+while True:
+    idade = int(input('Digite a sua idade: '))
+
+    if idade < 0:
+        print('Fim do programa!!!')
+        break
+
+    sexo = input('Informe o seu sexo [M - F]: ')
+    salario = float(input('Informe o seu salário: '))
+
+    if qtd_habitante == 0:
+        maior_salario = salario
+        menor_salario = salario
+        maior_idade = idade
+        menor_idade = idade
+        sexo_menor_salario = sexo
+        idade_menor_salario = idade
+
+    qtd_habitante += 1
+    media_salario += salario  #media_salario / qtd_habitantes = media
+
+    if idade > maior_idade:
+        maior_idade = idade
+
+    if idade < menor_idade:
+        menor_idade = idade
+
+    if salario > maior_salario:
+        maior_salario = salario
+
+    if salario < menor_salario:
+        menor_salario = salario
+        idade_menor_salario = idade
+        sexo_menor_salario = sexo
+
+    if sexo == 'F':
+        qtd_mulheres += 1
+
+
+print(f'Maior idade do grupo: {maior_idade}')
+print(f'Menor idade do grupo: {menor_idade}')
+print(f'Maior salário do grupo: {maior_salario}')
+print(f'Menor salário do grupo: {menor_salario}')
+print(f'Quantidade de mulheres na região: {qtd_mulheres}')
+print(f'Média salarial: {media_salario / qtd_habitante}')
+print(f'Idade da pessoa com menor salário: {idade_menor_salario}')
+print(f'Sexo da pessoa com menor salário: {sexo_menor_salario}')
