@@ -73,8 +73,13 @@ def maior (num1, num2):
         print(f" {num2} é maior que {num1}")
 
 maior(5,10)
-#-----------------------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------------
+'''Escreva uma função que recebe dois números (a e b) como parâmetro e retorna True caso a soma dos dois seja maior que um terceiro parâmetro, chamado limite'''
 
+def comparar (num1, num2, limite):
+    print((num1 + num2) > limite)
+
+comparar(5,5,10)
 #-----------------------------------------------------------------------------------------------------------------------------------------
 
 #Escreva uma função que recebe um número n como parâmetro e imprime se n é positivo ou negativo.
@@ -88,5 +93,24 @@ def positivoOuNegativo():
 
 positivoOuNegativo()
 
-#-----------------------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------------
+'''Fizz Buzz - Se o parâmetro da função for divisível por , retorne fizz, se o parâmetro da função for divisível por 5, retorne buzz. se o parâmetro da função for divisível por 5 e por 3, retorne FizzBuzz, caso contrário, retorne o número enviado.'''
+
+def divisor (num):
+
+    if (num % 3 == 0) and (num % 5 == 0):
+        fizzbuzz = print("FizzBuzz")
+        return fizzbuzz
+    elif num % 5 ==0:
+        buzz = print("buzz")
+        return buzz
+    elif num % 3 == 0:
+        fizz = print("fizz")
+        return fizz
+    else:
+        print(f"{num}")
+
+divisor(15)
+
+
 
