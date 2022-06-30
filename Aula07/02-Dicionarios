@@ -1,0 +1,65 @@
+matriz é uma lista dentro de uma lista
+alunos = [["Carlos", 9.5, "Informatica"], ["Rene", 10, "Dev Fullstack"]]
+
+#print(alunos[0][0])
+
+for linha in alunos:
+    for aluno in linha:
+        print(aluno)
+       
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+TUPLAS
+indexidas como as listas, porém elas são imutaveis.
+sintaxe -> tupla = (1,2,3,4,5)
+
+# TUPLAS
+
+# Indexidas
+# Imutaveis
+
+
+dificuldades = ("Facil", "Medio", "Dificil")
+
+print(type(dificuldades))
+
+
+print(sum(dificuldades))
+
+# tupla[0] = 10
+print(dificuldades[0])
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DICIONARIOS
+São indexisaveis(chaves), mutaqvies e homogenias.
+
+
+escola = {"Nome":"Infinity School", "Endereco":"Av Santos dummont",
+         "Qtd_alunos":15}
+
+print(type(escola))
+
+print(escola["Nome"])
+print(escola["Endereco"])
+
+#Adicionando itens
+
+escola["nota_mec"] = 10
+print(escola)
+
+escola["Endereco"] = "Rui barbosa"
+
+print(escola)
+
+escola["Endereco"] = "Desembargador moreira"
+
+# Iterando sobre uma lista
+# for item in escola:
+#     print(f'Item: {escola[item]}')
+
+# keys, values, itens()
+
+# for chave, valor in escola.items():
+#     print(f'Chave: {chave} valor: {valor}')
+
+
+# escola.pop("Endereco")
+# print(escola)
