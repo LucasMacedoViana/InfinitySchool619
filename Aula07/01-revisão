@@ -1,0 +1,43 @@
+anotações do professor
+
+
+
+lista = ["Carne", "Macarrão", "arroz", "Feijão"]
+#           0         1       2           3
+#indices
+lista[0] = "Carne de porco"
+
+
+
+# Percorrendo uma lista
+# for produto in lista:
+#     print(produto)
+
+print(f"Lista antes: {lista}")
+#Adicionando um item na lista (append)
+produto = input('Informe o produto que deseja adicionar')
+
+#Inserindo o produto no final da lista
+lista.append(produto)
+
+print(f"Lista agora: {lista}")
+
+#Inserindo o produto na posição 0
+lista.insert(0, produto)
+
+print(f'Lista nova: {lista}')
+
+#removendo o ultimo item da lista
+lista.pop()
+
+print(f'Lista com pop: {lista}')
+
+lista.pop(0)
+
+print(f'Lista com pop(0): {lista}')
+
+#remove()
+
+lista.remove('arroz')
+
+print(f'Lista com remove(): {lista}')
