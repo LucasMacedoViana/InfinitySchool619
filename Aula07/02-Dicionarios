@@ -63,3 +63,30 @@ escola["Endereco"] = "Desembargador moreira"
 
 # escola.pop("Endereco")
 # print(escola)
+
+
+
+
+
+asteroide = {}
+
+while True:
+    distancias = []
+    nome_asteroide = input('Digite o nome do asteroide: ')
+
+    for i in range(5):
+        in_distancia = float(input(f'Digite a {i+1}ª Distancia do asteroide: '))
+        distancias.append(in_distancia)
+        asteroide[nome_asteroide] = distancias
+
+    parar = input("(s) Sim"
+                  "\n(n) Não"
+                  "\ncarolDeseja acrescentar mais um asteroide?")
+    if parar not in ['n','N']:
+        continue
+    else:
+        break
+
+
+for chave, distancia in asteroide.items():
+    print(f'A distância média do asteroide {chave} é de {sum(distancia)/5} KMs')
