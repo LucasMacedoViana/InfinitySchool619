@@ -1,0 +1,79 @@
+Programação orientada e objeto
+
+#Definindo uma Classe
+class Pessoa:
+    #Método constutor
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+        #print(f'nome{self.nome}')
+        #print(f'idade{self.idade}')
+        #print('-----------------\n\n')
+
+    def dizerOla(self, msg):
+        print(f'me chamo {self.nome} e {msg}')
+
+
+# Criando Objetos = criar variavel
+
+pessoa1 = Pessoa('Lucas', 29)
+pessoa2 = Pessoa('Mateus', 25)
+pessoa3 = Pessoa('Rafaela', 30)
+pessoa4 = Pessoa("Iva", 52)
+pessoa5 = Pessoa("Flavio", 52)
+
+#Chamando atributos e metodos de um objeto
+pessoa1.nome ="Luan Vasconselos"
+pessoa1.dizerOla('Tenha uma boa noite!!')
+pessoa2.nome = "Jose"
+pessoa2.dizerOla('Se cuida')
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+titular = input("Digite o nome do titular: ")
+conta = int(input("Digite o número da conta:"))
+saldo = float(input("Digite o Saldo R$: "))
+vip = False
+
+
+class ContaBancaria:
+    def __init__(self, titular, conta, saldo, vip):
+        self.titular = titular
+        self.conta = conta
+        self.saldo = saldo
+        self.vip = vip
+    def exibirDados(self):
+        print(f'Titular da conta{self.titular}')
+        print(f'Número da Conta R$: {self.conta}')
+        print(f'Saldo da Conta R$: {self.saldo}')
+        print(f'O Clien é vip? {self.vip}')
+    def depositar(self):
+        deposito = float(input("Digite o valor a ser depositado R$ "))
+        if deposito < 0:
+            print("Valor de deposito não autorizado")
+        else:
+            self.saldo += deposito
+            print(f'Seu novo saldo é de R${cliente1.saldo:.2f}')
+    def sacar(self):
+        saque = float(input("Digite o valor a ser sacado R$ "))
+        if saque > self.saldo:
+            print("Valor de saque não autorizado")
+        else:
+            self.saldo -= saque
+            print(f'Seu novo saldo é de R${cliente1.saldo:.2f}')
+
+cliente1 = ContaBancaria(titular,conta,saldo,False)
+
+while True:
+    operacao = int(input("(1) Sacar"
+                         "\n(2) Depositar"
+                         "\nDigite a operação que deseja fazer"))
+    if operacao == 1:
+        cliente1.sacar()
+    elif operacao == 2:
+        cliente1.depositar()
+
+    parar = input("Deseja fazer uma nova operação?")
+    if parar == "s":
+        continue
+    else:
+        break
