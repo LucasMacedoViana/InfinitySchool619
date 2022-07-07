@@ -1,0 +1,100 @@
+A Programação Orientada a Objetos (POO) é ​​um paradigma de programação baseado no conceito de Classes e Objetos.
+
+As classes podem conter atributos e métodos: 
+
+Atributos na forma de campos (também chamamos de dados ou propriedades)
+Métodos, na forma de procedimentos (funções do objeto).
+
+Para definir os atributos de uma classe em seu construtor, basta passá-los como parâmetro
+
+
+'''
+#classe
+class Aluno:
+    #constructos
+    def __init__(self, matricula, nome, curso):
+        self.nome = nome
+        self.matricula = matricula
+        self.curso = curso
+        print('constructor iniciado')
+    def exibirDados(self):
+        print(f'Nome do aluno: {self.nome}')
+        print(f'Matricula do alunos{self.matricula}')
+        print(f'Curso do aluno: {self.curso}')
+
+# nome do objeto = nome_da_classe (-parametros-)
+
+a1 = Aluno(1, 'Roberto', 'fotografia')
+a2 = Aluno(2, 'Gabriela', 'Metaverso')
+
+a1.exibirDados()
+a2.exibirDados()'''
+
+--------------------------------------------------------
+1. Criar uma classe chamada Elevador
+
+Atributos:
+- Quantidade de andares
+- Andar Atual (terreo = 0)
+- Quantidade de pessoas (dentro do elevador)
+- Capacidade 
+
+
+Métodos
+- Subir()
+    Sobe o andar atual (+1), não pode subir se já estiver no ultimo andar
+
+- Descer()
+    Desce um andar (-1), não pode descer se já estiver no térreo
+
+- Entrar(qtd_pessoas)
+    Acrescenta pessoas de dentro do elevador, mas não pode permitir ultrapassar a capacidade
+
+- Sair(qtd_pessoas)
+    Retira pessoas de dentro do elevador, mas não pode permitir a quantidade de pessoas no elevador ficar negativa 
+
+
+class Elevador:
+    def __init__(self, qtdAndares, andar, pessoas, capacidade):
+        self.qtdAndares = qtdAndares
+        self.andar = andar
+        self.pessoas = pessoas
+        self.capacidade = capacidade
+
+    def subir(self):
+        self.andar +=1
+        if self.andar == 0:
+            print('Você está no terreo')
+        else:
+            print(f'andar atual é {self.andar}')
+        return ''
+
+    def descer(self):
+        self.andar -=1
+        if self.andar == 0:
+            print('Você está no terreo')
+        print(f'Oandar atual é {self.andar}')
+        return ''
+
+    def entrar(self, qtd_pessoas):
+        if qtd_pessoas + self.pessoas > self.capacidade:
+            print(f'Capacidade máxima atingida')
+        else:
+            self.pessoas += qtd_pessoas
+            print(f'Quandtidade de pessoas no elevador{self.pessoas}')
+        return ''
+
+    def sair(self, qtd_pessoas):
+        if self.pessoas == 0:
+            print(f'Não tem ninguem no elevador')
+        else:
+            self.pessoas -= qtd_pessoas
+            print(f'Quandtidade de pessoas no elevador{self.pessoas}')
+        return ''
+
+e1 = Elevador(20,0,10,20)
+
+print(e1.sair(5))
+
+
+
