@@ -1,0 +1,30 @@
+forma de protejer o atributo.
+get e set
+
+set para atribuir valore
+get devolve o valor da variavel
+
+modificadores de acesso sao palavras reservadas que permite criar niveis de visibilidade do atributo
+@property
+#nome_atributo.setter
+
+@property #== get
+derf titular(self):
+  return self.__titular
+  
+é igla a 
+
+def getTitular (self):
+  return self.__titular = titular
+  
+@titular.setter #== set
+def titular(self,titular):
+  self.__titular = titular
+
+é igal a 
+
+def setTitular(self,titular):
+  self.__titular = titular
+  
+  
+setter so pode vir se o property vier antes
