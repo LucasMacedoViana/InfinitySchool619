@@ -1,0 +1,86 @@
+Crie uma classe chamada Aluno com os atributos
+- Matricula
+- Nomede
+- Curso
+- nota1
+- nota2
+- frequência
+
+---------------------------
+
+class Aluno:
+    def __init__(self):
+        self.__matricula = 0
+        self.__nome = ""
+        self.__curso = ""
+        self.__nota1 = 0
+        self.__nota2 = 0
+        self.__frequencia = 0
+
+    @property
+    def matricula(self):
+        return self.__matricula
+
+    @matricula.setter
+    def matricula(self, matricula):
+        self.__matricula = matricula
+
+    @property
+    def nome(self):
+        return self.__nome
+
+    @nome.setter
+    def nome(self, nome):
+        self.__nome = nome
+
+    @property
+    def curso(self):
+        return self.__curso
+
+    @curso.setter
+    def curso(self, curso):
+        self.__curso = curso
+
+    @property
+    def nota1(self):
+        return self.__nota1
+
+    @nota1.setter
+    def nota1(self, nota1):
+        if nota1 > 0:
+            self.__nota1 = nota1
+        else:
+            print('Nota inválida!')
+
+    @property
+    def nota2(self):
+        return self.__nota2
+
+    @nota2.setter
+    def nota2(self, nota2):
+        if nota2 > 0:
+            self.__nota2 = nota2
+        else:
+            print('Nota inválida!')
+
+    @property
+    def frequencia(self):
+        return self.__frequencia
+
+    @frequencia.setter
+    def frequancia(self, frequencia):
+        self.__frequencia = frequencia
+
+    def media(self):
+        return (self.__nota1 + self.__nota2) / 2
+
+a = Aluno()
+a.matricula = 132456
+a.nome = 'Xico'
+a.nota1 = 7
+a.nota2 = 8
+a.curso = 'dev'
+a.frequancia = 100
+
+
+print(f'O Alunos {a.nome}, obteve a media de {a.media():.2f} no curso {a.curso} com uma frequencia de {a.frequancia}%')
