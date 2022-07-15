@@ -1,0 +1,70 @@
+Composição
+A composição é a relação mais forte que há entre as classes. Nessa associação, uma classe será dona dos objetos de outra classe.
+Ou seja, os objetos que pertencem a classe dependem da existência da classe onde eles estão contidos.
+Usamos quando queremos delegar uma função para outra classe usamos composição.
+
+class Funcionario:
+    def __init__(self, matricula, nome, setor, valor_hora, qtd_horas, comissao):
+        self.matricula = matricula
+        self.nome = nome
+        self.setor = setor
+        self.salario = Salario(valor_hora, qtd_horas, comissao)
+
+    def calculoSalario(self):
+        return self.salario.calcularSalario()
+
+
+
+
+class Salario:
+    def __init__(self, valor_hora, qtd_horas, comissao):
+        self.valor_hora = valor_hora
+        self.qtd_horas = qtd_horas
+        self.comissao = comissao
+
+    def calcularSalario(self):
+        return self.valor_hora * self.qtd_horas + self.comissao
+
+f = Funcionario(1,'José','Vendas',15,100,1500)
+
+print(f.calculoSalario())
+
+
+---------------------------------------------------------------------------
+Crie uma classe chamada Endereco que receberá rua, bairro e cidade em seu construtor
+
+Crie uma classe chamada empresas que conterá os seguintes atributos. nome, área (serão passados por parâmetro no construtor) e endereços que será do tipo list e começará vazio. 
+
+Crie dois métodos na classe Empresa
+- Inserir endereço, receberá a rua, bairro e a cidade por parâmetro e será passado em um objeto da classe endereco. Em seguida esse objeto deve ser inserido na lista de endereços da classe Empresa. 
+
+- Listar endereços: Exibe todos os endereços da lista
+
+
+class Endereco:
+    def __init__(self, rua, bairro, cidade):
+        self.rua = rua
+        self.bairro = bairro
+        self.cidade = cidade
+
+
+class Empresa:
+    def __init__(self, nome, area):
+        self.nome = nome
+        self.area = area
+        self.enderecos = []
+
+    def inserirEndereco(self, rua, bairro, cidade):
+        obj_endereco = Endereco(rua, bairro, cidade)
+        self.enderecos.append(obj_endereco)
+
+    def exibirLista(self):
+        for endereco in self.enderecos:
+            print(endereco.rua, endereco.cidade, endereco.bairro)
+empresa = Empresa('Apple', 'Tecnologia')
+empresa.inserirEndereco('Rua X', 'Bairro Y', 'Cidade Z')
+empresa.inserirEndereco('Rua A', 'Bairro B', 'Cidade C')
+empresa.exibirLista()
+
+
+
