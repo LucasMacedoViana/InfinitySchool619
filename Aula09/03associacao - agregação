@@ -1,0 +1,76 @@
+A palavra chave para descobrir uma agregação é “Tem-um”. Ou seja o Funcionário tem um salário 
+Em agregação a associação é unilateral. Ou seja, eu posso passar um salário para um funcionário, mas não posso passar um funcionário para um salário 
+Os objetos por terem sido criados separadamente, são interdependentes, ou seja, não dependem um do outro para sua existência
+
+
+-----------------------------------------------------
+
+class Funcionario:
+    def __init__(self, matricula, nome, setor, salario):
+        self.matricula = matricula
+        self.nome = nome
+        self.setor = setor
+        self.salario = salario
+
+    def calculoSalario(self):
+        return self.salario.calcularSalario()
+
+
+class Salario:
+    def __init__(self, valor_hora, qtd_horas, comissao):
+        self.valor_hora = valor_hora
+        self.qtd_horas = qtd_horas
+        self.comissao = comissao
+
+    def calcularSalario(self):
+        return self.valor_hora * self.qtd_horas + self.comissao
+
+
+s = Salario(15,100,1500)
+f = Funcionario(1, 'José', 'Vendas', s)
+print(f'Salário final: {f.calculoSalario()}')
+----------------------------------------------------------------
+
+1.Crie uma classe chamada produto, que conterá código, nome e valor.
+2. Crie uma classe chamada carrinho de compra que em seu construtor inicializa-rá uma lista de produtos vazia
+3. Um método para inserir produtos, que receberá um produto por parâmetro e será inserido na lista.
+4. Um métodos para listar todos os produtos.
+5. Um método para exibir o valor total
+
+class Produto:
+    def __init__(self, codigo, nome, valor):
+        self.codigo = codigo
+        self.nome = nome
+        self.valor = valor
+
+class Carrinho:
+    def __init__(self):
+        self.lista = []
+
+    def inserirProduto(self, produto):
+        self.lista.append(produto)
+
+    def listarProduto(self):
+        for produtos in self.lista:
+            print(produtos.nome)
+            print(produtos.valor)
+
+    def total(self):
+        soma = 0
+        for numeros in self.lista:
+            soma += numeros.valor
+        print(f'Valor total da compra {soma}')
+
+
+
+
+p1 = Produto(1, 'arroz', 5.0)
+p2 = Produto(2, 'feijao', 7.5)
+p3 = Produto(3, 'macarrão', 10.0)
+c1 = Carrinho()
+c1.inserirProduto(p1)
+c1.inserirProduto(p2)
+c1.inserirProduto(p3)
+c1.listarProduto()
+c1.total()
+
