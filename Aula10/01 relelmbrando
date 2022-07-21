@@ -1,0 +1,40 @@
+Crie uma classe chamada Escola com os seguintes dados: nome da escola, endereço, cursos (será uma lista de cursos), alunos (uma lista que inicializará vazia).
+A classe também conterá dois métodos. Uma para matricular alunos. Receberá um objeto da classe Aluno que será inserido na lista de alunos. E uma método de exibir alunos matriculados, que percorrerá a lista de alunos e a exibirá para o usuário. 
+
+A classe Aluno terá os seguintes atributos
+- Matrícula
+- Nome
+- Idade
+- Curso
+
+class Escola:
+    def __init__(self, nomeEscola, endereco, cursos):
+        self.nomeEscola = nomeEscola
+        self.enderco = endereco
+        self.curso = cursos
+        self.alunos = []
+
+    def matricular(self, matricula, nome, idade, curso):
+        obj_aluno = Aluno(matricula, nome, idade, curso)
+        self.alunos.append(obj_aluno)
+
+    def exibirAlunos(self):
+        for alunos in self.alunos:
+            print(alunos.nome)
+            print(alunos.matricula)
+            print(alunos.idade)
+            print(alunos.curso)
+
+
+class Aluno:
+    def __init__(self, matricula, nome, idade, curso):
+        self.matricula = matricula
+        self.nome = nome
+        self.idade = idade
+        self.curso = curso
+
+escola1 = Escola('escola a', 'rua a')
+escola1.matricular(123,'jose', 25, 'ux')
+escola1.exibirAlunos()
+
+
