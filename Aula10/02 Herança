@@ -1,1 +1,95 @@
 
+'''class Funcionario:
+    def __init__(self, matricula, nome, salario):
+        self.matricula = matricula
+        self.nome = nome
+        self.salario = salario
+
+class Estagiario(Funcionario):
+    def __init__(self, matricula, nome, salario, horas):
+        super().__init__(matricula, nome, salario)
+        self.horas = horas
+
+    def contratacao(self):
+        if self.horas >= 300:
+            print('O estagiario pode ser contratado')
+        else:
+            print(f'O estagio ainda não acabou. Ainda faltam {300 - self.horas} Horas ate o fim do estagio')
+
+class Gerente(Funcionario):
+    def __init__(self, setor, comissao, matricula, nome, salario):
+        super().__init__(matricula, nome, salario)
+        self.setor = setor
+        self.comissao = comissao
+
+    def contratar(self,qtd_funcionarios):
+        if qtd_funcionarios < 10:
+            print('Atenção, é necessario contratar mais funcionarios')
+        else:
+            print('Quantidade de fundionarios suficiente!')
+
+
+g = Gerente('Vendas', 1000, 1, 'Lucas', 3000)
+g.contratar(15)
+g.contratar(5)
+
+e = Estagiario(10, 'mateus', 1000, 300)
+e.contratacao()'''
+
+class Conta:
+    def __init__(self, numero, nome, saldo):
+        self.numero = numero
+        self.nome = nome
+        self.saldo = saldo
+
+    def sacar(self,valor):
+        if valor > self.saldo:
+            print("Você não tem limite o suficiente para sacar esse valor")
+        else:
+            self.saldo -= valor
+            print('Saque efetuado com sucesso')
+
+    def deposito(self,valor):
+        self.saldo += valor
+        print('Deposito efetuado com sucesso')
+
+    def extrato(self):
+        print(f'Seu saldo é de R$ {self.saldo}')
+
+class ContaPolpanca(Conta):
+    def __init__(self, rendimento, numero, nome, saldo):
+        super().__init__(numero, nome, saldo)
+        self.rendimento = rendimento
+    def rendimento(self):
+        self.saldo += self.rendimento
+
+class ContaCorrente(Conta):
+    def __init__(self, cheque, numero, nome, saldo):
+        super().__init__(numero, nome, saldo)
+        self.cheque = cheque
+
+    def saque(self, valor):
+        if valor > self.saldo:
+            if valor > (self.saldo + self.cheque):
+                print('Saldo insuficiente')
+            else:
+                print('você entrou no cheque especial ')
+                self.saldo = (self.saldo + self.cheque) - valor
+        else:
+            self.saldo -= valor
+            print('saque realizado com sucesso')
+
+
+'''c = ContaPolpanca(100, 1, 'lucas', 500)
+c.extrato()
+c.deposito(50)
+c.extrato()
+c.sacar(50000)
+c.extrato()
+c.sacar(100)
+c.extrato()'''
+
+c = ContaCorrente(200,123,'Lucas', 200)
+c.extrato()
+c.saque(250)
+c.extrato()
