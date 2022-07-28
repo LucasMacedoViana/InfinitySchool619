@@ -1,0 +1,35 @@
+- Eletrodomestico (pai)
+Atributos: 
+ligado:
+voltagem: 110v/220v 
+
+
+Métodos
+- Ligar
+- Desligar
+
+
+Ar-condicionado (filho)
+Atributos:
+- marca/modelo
+- temperatura atual
+
+Método
+- AumentarTemperatura 
+
+- DiminuirTemperatura
+
+-----------------------------------------------------------
+
+Ventilador (Filho)
+
+Atributos
+- Velocidade (1,2,3)
+- Número de pás (no máximo 5)
+
+Métodos
+AumentarVelocidade
+- Aumenta em 1a velocidade, até um limite de 3
+
+DiminuirVelocidade
+- Diminui em 1 a velocidade, quando tiver em 1, desliga o ventilador
