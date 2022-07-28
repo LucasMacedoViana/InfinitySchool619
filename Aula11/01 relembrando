@@ -1,3 +1,9 @@
+SLIDE DA AULA DE HOJE 
+
+https://docs.google.com/presentation/d/1OTnltavvfBMFV_70or-6cLeVSFqC2pLc8Vr8bcKBgdk/edit#slide=id.p1
+
+---------------------------------------------------------------------------------------------------
+
 - Eletrodomestico (pai)
 Atributos: 
 ligado:
@@ -33,3 +39,80 @@ AumentarVelocidade
 
 DiminuirVelocidade
 - Diminui em 1 a velocidade, quando tiver em 1, desliga o ventilador
+
+
+-------------------------------------------------------------------
+
+
+class Eletrodomestico:
+    def __init__(self, voltagem):
+        self.voltagem = voltagem
+        self.ligado = False
+
+    def ligar(self):
+        if not self.ligado:
+            self.ligado = True
+            print('Aparelho foi ligado')
+        else:
+            print('O aparelho já está ligado')
+
+
+class ArCondicionado(Eletrodomestico):
+    def __init__(self, voltagem, marca, temperatura):
+        super().__init__(voltagem)
+        self.marca = marca
+        self.temperatura = temperatura
+
+
+    def aumentarTemperatura(self):
+        if self.ligado:
+            self.temperatura += 1
+            print('Temperatura atual: ', self.temperatura)
+
+    def diminuirTemperatura(self):
+        if self.ligado:
+            self.temperatura -= 1
+            print('Temperatura atual: ', self.temperatura)
+
+
+class Ventilador(Eletrodomestico):
+    def __init__(self, voltagem):
+        super().__init__(voltagem)
+        self.nPas = None
+        self.velocidade = 0
+
+
+    def setNPas(self, nPas):
+        if 0 > nPas <= 5:
+            self.nPas = nPas
+        else:
+            print('Número inválido!!')
+
+    def setVelocidade(self, velocidade):
+        if 0 < velocidade <= 3:
+            self.velocidade = velocidade
+        else:
+            print('Velocidade não permitida!!')
+
+    def aumentarVelocidade(self):
+        if self.ligado:
+            if self.velocidade < 3:
+                self.velocidade += 1
+                print('Velocidade atual', self.velocidade)
+            else:
+                print('Ventilador já está na velocidade máxima!!')
+
+        else:
+            print('O ventilador não está ligado!!')
+
+
+    def diminuirVelocidade(self):
+        if self.ligado:
+            if self.velocidade == 1:
+                self.ligado = False
+                print('O ventilador foi desligado!!')
+            else:
+                self.velocidade -= 1
+                print('Velocidade atual', self.velocidade)
+    
+
