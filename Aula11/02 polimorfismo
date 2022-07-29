@@ -78,3 +78,80 @@ print(p1.nome)
 
 
 ---------------------------------------------------------------------
+
+
+from abc import abstractmethod, ABC
+
+class Smatphone(ABC):
+    def __init__(self, fabricante, memoria):
+        self.fabricante = fabricante
+        self.memoria = memoria
+        self.bateria = 100
+        self.consumo = 0
+        self.ligado = False
+        self.apps = []
+
+    def ligar(self):
+        if not self.ligado:
+            self.ligado = True
+            print('Aparelho foi ligado')
+        else:
+            print('O aparelho ja esta ligado')
+
+    def desligar(self):
+        if self.ligado:
+            self.ligado = False
+            print('Aparelho foi desligado')
+        else:
+            print('O aparelho já esta desligado')
+
+    @abstractmethod
+    def abrirApp(self,nomeApp, consMemoria, consBateria):
+        pass
+
+    @abstractmethod
+    def fecharApp(self, nomeApp):
+        pass
+
+    @abstractmethod
+    def listarApp(self):
+        pass
+    
+    def exibirDados(self):
+        print(f'Fabricante: {self.fabricante}')
+        print(f'Memoria: {self.memoria}')
+        print(f'Bateria: {self.bateria}')
+        print(f'Consumo {self.consumo}')
+
+class App:
+    def __init__(self, nome, consMemoria, consBateria):
+        self.nome = nome
+        self.consMemoria = consMemoria
+        self.consBateria = consBateria
+
+
+class Xiaomi(Smatphone):
+    def __init__(self,fabricante, memoria):    
+        super().__init__(fabricante, memoria)
+    
+    def abrirApp(self,nomeApp, consMemoria, consBateria):
+        if consMemoria > self.memoria or consBateria > self.bateria:
+            print('O aplicativo não pode ser aberto')
+        else:
+            app = App(nomeApp, consMemoria, consBateria)
+            self.apps.append(app)
+            self.memoria += (consMemoria * 0.8)
+            self.bateria += (consBateria *0.8)
+        
+    def fecharApp(self, nomeApp):
+        for lista in self.apps:
+            if lista.nome == nomeApp:
+                self.apps.remove(lista)
+                self.bateria -= 0.005
+    
+    def listarApp(self):
+        
+        
+
+class Iphone(Smatphone):
+    pass
