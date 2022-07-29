@@ -1,0 +1,80 @@
+O polimorfismo costuma ser chamado de o terceiro pilar da programação orientada a objetos, depois do encapsulamento e a herança. O polimorfismo é uma palavra grega que significa "de muitas formas"
+
+class FormaGeometrica:
+
+    def calcularArea(self):
+        pass
+
+
+class Quadrado(FormaGeometrica):
+    def __init__(self, lado):
+        self.lado = lado
+
+    def calcularArea(self):
+        return self.lado ** 2
+
+
+class Triangulo(FormaGeometrica):
+    def __init__(self, base, altura):
+        self.base = base
+        self.altura = altura
+
+    def calcularArea(self):
+        return self.base * self.altura / 2
+
+
+quad = Quadrado(5)
+
+tri = Triangulo(2,5)
+
+print(f'Área do quadrado: {quad.calcularArea()}')
+print(f'Área do triângulo: {tri.calcularArea()}')
+
+
+--------------------------------------------------------------------
+
+class Pessoa:
+    def __init__(self, estado, renda):
+        self.estado = estado
+        self.renda = renda
+        self. imposto = 0
+
+    def declararImpsoto(self):
+        pass
+
+class PessoaFisica(Pessoa):
+    def __init__(self, estado, renda, nome, cpf, nascimento):
+        super().__init__(estado, renda)
+        self.nome = nome
+        self.cpf = cpf
+        self.nascimento = nascimento
+
+    def declararImpsoto(self):
+        if self.renda > 2000:
+            imposto = self.renda * 0.05
+            print(f'Valor a ser pago de Imposto é R${imposto:.2f}')
+        else:
+            print('Você esta isento do imposto de renda')
+
+class PessoJuridica(Pessoa):
+    def __init__(self, estado, renda, cnpj, raSocial, nomeFantasia):
+        super().__init__(estado, renda)
+        self.cnpj = cnpj
+        self.raSoccial = raSocial
+        self.nomeFantasia = nomeFantasia
+
+    def declararImpsoto(self):
+        imposto = self.renda * 0.2
+        print(f'Valor a ser pago de Imposto é R${imposto:.2f}')
+
+
+p1 = PessoaFisica('Ceara', 2500, 'Lucas', '123456789', '22/07/1992')
+p1.declararImpsoto()
+
+e1 = PessoJuridica('Ceara', 30000, '123456789', 'asb', 'yes')
+e1.declararImpsoto()
+
+print(p1.nome)
+
+
+---------------------------------------------------------------------
