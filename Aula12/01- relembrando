@@ -1,0 +1,42 @@
+from abc import ABC, abstractmethod
+
+
+#ABC = ABSTRACT BASE CLASS
+class Conta(ABC):
+    def __init__(self, numero, titular, saldo):
+        self.numero = numero
+        self.titular = titular
+        self.saldo = saldo
+
+    @abstractmethod
+    def sacar(self, valor):
+        pass
+
+
+class ContaPoupanca(Conta):
+
+    def sacar(self, valor):
+        if self.saldo - valor >= 0:
+            self.saldo -= valor
+        else:
+            print('Saldo insuficiente!!')
+
+
+
+
+class ContaCorrente(Conta):
+    def __init__(self, numero, titular, saldo, limite):
+        super().__init__(numero, titular, saldo)
+        self.limite = limite
+
+    def sacar(self, valor):
+        if self.saldo + self.limite - valor > 0:
+            self.saldo -= valor
+
+        else:
+            print("saldo insuficiente")
+
+
+c = ContaCorrente(1, 'José', 1500, 200)
+
+c1 = Conta(2, 'Fernanda', 2000)
