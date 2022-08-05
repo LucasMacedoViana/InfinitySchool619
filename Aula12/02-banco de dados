@@ -1,0 +1,21 @@
+CREATE DATABASE escola
+
+USE escola 
+
+
+-- nome, tipo, propriedades(opcional)
+CREATE TABLE aluno(
+	matricula INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    curso VARCHAR(25),
+    nota FLOAT(4,2)
+);
+
+
+CREATE TABLE professor(
+	matricula INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    idade INT,
+    area VARCHAR(25),
+    salario FLOAT(7,2)
+);
